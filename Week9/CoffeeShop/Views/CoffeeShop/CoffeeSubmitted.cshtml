@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Coffee Submitted";
+    CoffeeClass coffee = ViewData["Coffee"] as CoffeeClass;
+}
+
+<h1>Coffee Submitted</h1>
+
+<p>Hello @coffee.FirstName!<br />
+    Your coffee order with @coffee.Creamer & @coffee.SugarType<br /> 
+    will be out soon!</p>
+

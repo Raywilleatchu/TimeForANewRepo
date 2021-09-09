@@ -28,6 +28,11 @@ namespace HTMLDemo2.Controllers
             return View();
         }
 
+        public IActionResult Nut(Customer cust)
+        {
+            return View(cust);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
