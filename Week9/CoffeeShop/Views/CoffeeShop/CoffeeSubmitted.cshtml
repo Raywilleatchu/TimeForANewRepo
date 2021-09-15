@@ -1,11 +1,20 @@
-﻿@{
+﻿@model Coffee;
+
+@{
     ViewData["Title"] = "Coffee Submitted";
-    CoffeeClass coffee = ViewData["Coffee"] as CoffeeClass;
 }
 
-<h1>Coffee Submitted</h1>
 
-<p>Hello @coffee.FirstName!<br />
-    Your coffee order with @coffee.Creamer & @coffee.SugarType<br /> 
-    will be out soon!</p>
+<h1>Coffee Selected</h1>
+<div>
+    @Model.Name
+</div>
+<br />
+
+<div>@Model.Description</div>
+
+
+
+<br />
+<a href="https://www.baristainstitute.com/blog/emmi-kinnunen/october-2019/affogato-ristretto-list-most-common-coffee-drinks">Source For Coffee Info</a>
 

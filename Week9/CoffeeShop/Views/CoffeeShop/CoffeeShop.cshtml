@@ -1,10 +1,11 @@
-﻿
+﻿@model List<Coffee>;
 @{
     ViewData["Title"] = "CoffeeShop";
 }
 
 <h1>CoffeeShop</h1>
-<div>
-    Hello @ViewData["FirstName"] @ViewData["LastName"]
-</div>
+@foreach (Coffee dr in Model)
+{
+    <div><a href="../CoffeeShop/CoffeeSubmitted?dr=@dr.ProductID">@dr.Name</a></div>
+}
 

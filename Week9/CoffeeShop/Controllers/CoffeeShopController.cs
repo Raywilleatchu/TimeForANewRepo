@@ -4,33 +4,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoffeeShop.Models;
+using MySql.Data.MySqlClient;
+using Dapper;
+using Dapper.Contrib.Extensions;
 
 namespace CoffeeShop.Controllers
 {
     public class CoffeeShopController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         public IActionResult CoffeeShop()
         {
-            ViewData["FirstName"] = "Ray";
-            ViewData["LastName"] = "Mandingo";
-            return View();
+            MySqlConnection db = new MySqlConnection("Server=localhost;Database=coffeeshop;Uid=root;Password=abc123");
+            List<Coffee> drinks = db.GetAll<Coffee>().ToList();
+            return View(drinks);
         }
 
-        public IActionResult CoffeeForm()
-        {
-            return View();
-        }
 
-        [HttpPost]
-        public IActionResult CoffeeSubmitted(CoffeeClass coffee)
+
+        public IActionResult CoffeeSubmitted(int dr)
         {
-            ViewData["Coffee"] = coffee;
-            return View();
+            MySqlConnection db = new MySqlConnection("Server=localhost;Database=coffeeshop;Uid=root;Password=abc123");
+            Coffee drink = db.Get<Coffee>(dr);
+            return View(drink);
+
+            //This doesnt work. When an option in coffee shop is selected, the ProductID num is not being set to the page...
+            
+            //return Content(drink);
         }
 
     }
