@@ -1,0 +1,23 @@
+﻿@model QandA
+@{
+    ViewData["Title"] = "QuestionPage";
+}
+
+<div>
+    <h1>@Model.question.title</h1>
+
+    <p>@Model.question.detail</p>
+</div>
+
+<div>
+    @foreach (Answers a in @Model.answers)
+    {
+        <div>@a.username<br />@a.detail<br />Upvotes: @a.upvotes</div>
+        <a asp-action="EditAnswer" asp-route-id="@a.id" class="btn btn-dark">Edit</a><br />
+    }
+</div>
+<br />
+<a asp-controller="QandA" asp-action="EditQuestion" asp-route-qID="@Model.question.id" class="btn btn-outline-dark">Edit Question</a>
+
+<a asp-controller="QandA" asp-action="AddAnswer" asp-route-qID="@Model.question.id" class="btn btn-success">Answer</a>
+

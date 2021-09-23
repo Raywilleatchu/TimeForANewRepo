@@ -1,0 +1,15 @@
+﻿@model Answers
+@{
+    ViewData["Title"] = "EditAnswer";
+}
+
+<h1>Edit Answer</h1>
+
+<form method="post" action="/QandA/SubmitEditAnswer">
+    <!--<div style="position:relative; bottom:2px;">Answer</div> <textarea name="detail"></textarea><br />-->
+    Answer <input type="text" class="form-control" name="detail" value="@Model.detail" />
+    <input type="hidden" name="questionID" value="@Model.questionID" />
+    <input type="hidden" name="id" value="@Model.id" />
+    <input type="submit" />
+</form>
+

@@ -1,0 +1,20 @@
+﻿@model Questions
+@{
+    ViewData["Title"] = "EditQuestion";
+}
+
+<h1>Edit Question</h1>
+
+<form method="post" action="/QandA/SubmitEditQuestion?qID=@Model.id">
+    Title <input type="text" name="title" value="@Model.title" /><br />
+    Question <input type="text" class="form-control" name="detail" value="@Model.detail" />
+    <label for="Category">Category</label>
+    <select name="Category" value="@Model.category">
+        <option value="Technical">Technical</option>
+        <option value="Non-Technical">Non-Technical</option>
+    </select><br />
+    Tags <input type="text" value="@Model.tags" />
+    <input type="hidden" name="id" value="@Model.id" />
+    <input type="hidden" name="status" value="@Model.status" />
+    <input type="submit" />
+</form>

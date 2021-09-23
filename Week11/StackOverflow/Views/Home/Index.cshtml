@@ -1,0 +1,21 @@
+﻿@model List<Questions>
+@{
+    ViewData["Title"] = "Home Page";
+    List<Answers> answers = new List<Answers>();
+}
+
+<div class="text-center">
+    <h1>Stack KindaFull</h1>
+    <a asp-controller="QandA" asp-action="AskQuestion" class="btn btn-dark">Ask A Question?</a>
+</div>
+
+<form method="get" action="../Home/SearchQuestion">
+    Search<br />
+    <input type="text" name="search" />
+    <input type="submit" />
+</form>
+
+@foreach (Questions q in Model)
+{
+    <a href="../QandA/QuestionPage?qID=@q.id">@q.title</a>
+}

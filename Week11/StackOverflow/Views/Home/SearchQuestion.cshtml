@@ -1,0 +1,14 @@
+﻿@model List<Questions>
+@{
+    ViewData["Title"] = "SearchQuestion";
+}
+
+<h1>Search</h1><br />
+
+<div>
+    @foreach (Questions q in Model) 
+    {
+         <a href="../QandA/QuestionPage?qID=@q.id">@q.title</a>
+    }
+</div>
+

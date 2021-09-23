@@ -1,0 +1,8 @@
+C:\Users\Rmansour2\Documents\GCREPO\htmlrepos\Week11\DepInjDemo\obj\Debug\netcoreapp3.1\DepInjDemo.csproj.AssemblyReference.cache
+C:\Users\Rmansour2\Documents\GCREPO\htmlrepos\Week11\DepInjDemo\obj\Debug\netcoreapp3.1\DepInjDemo.AssemblyInfoInputs.cache
+C:\Users\Rmansour2\Documents\GCREPO\htmlrepos\Week11\DepInjDemo\obj\Debug\netcoreapp3.1\DepInjDemo.AssemblyInfo.cs
+C:\Users\Rmansour2\Documents\GCREPO\htmlrepos\Week11\DepInjDemo\obj\Debug\netcoreapp3.1\DepInjDemo.csproj.CoreCompileInputs.cache
+C:\Users\Rmansour2\Documents\GCREPO\htmlrepos\Week11\DepInjDemo\obj\Debug\netcoreapp3.1\DepInjDemo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Rmansour2\Documents\GCREPO\htmlrepos\Week11\DepInjDemo\obj\Debug\netcoreapp3.1\DepInjDemo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rmansour2\Documents\GCREPO\htmlrepos\Week11\DepInjDemo\obj\Debug\netcoreapp3.1\DepInjDemo.RazorAssemblyInfo.cache
+C:\Users\Rmansour2\Documents\GCREPO\htmlrepos\Week11\DepInjDemo\obj\Debug\netcoreapp3.1\DepInjDemo.RazorAssemblyInfo.cs

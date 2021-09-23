@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add Coffee</h1>
+
+<form method="post" action="../Home/SaveAdd">
+    <input type="hidden" name="ProductID"/>
+    Coffee Name: <input type="text" name="Name"/><br />
+    Price: <input type="text" name="Price"/><br />
+    Category: <input type="text" name="Category"/><br />
+    Description: <textarea name="Description" cols="30" rows="10"></textarea><br />
+
+    <input type="submit" value="Save" />
+
+</form>

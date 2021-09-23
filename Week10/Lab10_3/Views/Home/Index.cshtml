@@ -1,0 +1,23 @@
+﻿@model List<Coffee>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+
+<div class="text-center">
+    <h1 class="display-4">Hello welcome to the CoffeeShop</h1>
+
+    <h2 class="sub-head">Where All Coffee Needs Are Met</h2>
+</div>
+
+<div class="coffs-align">
+    @foreach (Coffee coff in Model)
+    {
+        <div class="coff">
+            <a href="../Home/CoffeePage?coffID=@coff.ProductID">@coff.Name</a>
+        </div>
+    }
+</div>
+<a href="/Home/Add" style="position:fixed; right: 935px;"><button>Add</button></a>
+

@@ -1,0 +1,13 @@
+﻿@model Answers
+@{
+    ViewData["Title"] = "AddAnswer";
+}
+
+<h1>Enter Answer Here @Model.username</h1>
+
+<form method="post" action="/QandA/SubmitAnswer">
+    <div style="position:relative; bottom:2px;">Answer</div>
+    <textarea name="detail"></textarea><br />
+    <input type="hidden" name="questionID" value="@Model.questionID" />
+    <input type="submit" />
+</form>

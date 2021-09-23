@@ -1,0 +1,15 @@
+﻿@model Coffee;
+@{
+    ViewData["Title"] = "CoffeePage";
+}
+
+<h1>@Model.Name</h1>
+
+<div>@Model.Description</div>
+
+<a href="../Home/Edit?id=@Model.ProductID"><button>Edit</button></a>
+<a href="/Home/Delete?id=@Model.ProductID"><button>Delete</button></a>
+
+
+
+

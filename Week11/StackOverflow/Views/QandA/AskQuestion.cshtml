@@ -1,0 +1,21 @@
+﻿@model Questions
+@{
+    ViewData["Title"] = "AskQuestion";
+}
+
+<h1>Ask Question</h1>
+<div class="text-center">
+    Hello, @Model.username what is your question?
+    
+</div>
+<form method="post" action="/QandA/SubmitQuestion">
+    Title <input type="text" name="title"/><br />
+    <div style="position:relative; bottom:2px;">Question</div> <textarea name="detail"></textarea><br />
+    <label for="Category">Category</label>
+    <select name="Category">
+        <option value="Technical">Technical</option>
+        <option value="Non-Technical">Non-Technical</option>
+    </select><br />
+    Tags <input type="text" value="null" />
+    <input type="submit"/>
+</form>
