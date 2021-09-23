@@ -14,11 +14,18 @@ namespace StackOverflow.Controllers
         //Input Question Details
         public IActionResult AskQuestion(Questions quest)
         {
-            DateTime date = DateTime.Now;
-            string formatDate = date.ToString("yyyy-MM-dd hh:mm:ss");
-            //quest.posted = formatDate;
-            quest.username = DAL.CurrentUser;
-            return View(quest);
+            if (DAL.CurrentUser == null)
+            {
+                return Redirect("/");
+            }
+            else
+            { 
+                DateTime date = DateTime.Now;
+                string formatDate = date.ToString("yyyy-MM-dd hh:mm:ss");
+                //quest.posted = formatDate;
+                quest.username = DAL.CurrentUser;
+                return View(quest);
+            }
         }
 
         //Submit Question Details
