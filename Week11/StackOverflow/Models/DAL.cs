@@ -43,6 +43,7 @@ namespace StackOverflow.Models
         //Add Question
         public static void AddQuestion(Questions q)
         {
+            
             string sql = $"call GetDateTime(@posted)";
             //var keyvalues = new { posted = q.posted };
             q.username = CurrentUser;
