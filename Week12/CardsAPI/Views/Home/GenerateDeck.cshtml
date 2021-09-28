@@ -1,0 +1,15 @@
+﻿@model Root
+@{
+    ViewData["Title"] = "GenerateDeck";
+}
+
+<h1>Generate Deck</h1>
+
+success = @Model.success<br />
+deck_id = @Model.deck_id<br />
+remaining = @Model.remaining<br />
+shuffled = @Model.shuffled<br />
+
+<div>
+    <a href="../Home/DrawCards?id=@Model.deck_id&&count=5">Draw</a>
+</div>
